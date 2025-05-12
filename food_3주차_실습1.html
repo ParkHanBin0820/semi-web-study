@@ -11,10 +11,38 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-    <script src="../static/firebase2.js" type="module"></script>
+        <script src="../static/firebase2.js" type="module"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/BlankHanSans.woff" rel="stylesheet">
+
     <style>
-        /* 구글 폰트 import url 넣어주세요. */
-        /* 구글 폰트 CSS rules를 전체 적용해 주세요. */
+        @font-face {
+            font-family: 'Blank Han Sans';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/BlankHanSans.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        
+
+
+        .nanum-gothic-regular {
+            font-family: "Nanum Gothic", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .gowun-dodum-regular {
+            font-family: "Gowun Dodum", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+
+        /* 구글 폰트 import url 넣어주세요. Ok*/
+        /* 구글 폰트 CSS rules를 전체 적용해 주세요.Ok */
 
         body {
             background-color: white;
@@ -26,7 +54,7 @@
             background-image:
                 url('https://images.unsplash.com/photo-1531697218799-ed0ae884c6c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80');
             background-position: right;
-            height: 650px;
+            height: 600px;
             display: flex;
             flex-direction: column;
         }
@@ -251,7 +279,7 @@
             </div>
         </div>
     </header>
-
+        
     <!-- 점보 트론 적용 jumbotron -->
     <!-- - https://getbootstrap.com/
     - Bootstrap 사이트에서 jumbotron가져와 vscode에 붙여 넣어주세요.
@@ -259,8 +287,10 @@
     - jumbotron의 내용을 예시사진과 똑같게 내용을 변경해 주세요.
         - 필요 없는 버튼, div를 적절하게 삭제
     - jumbotron <h1> 태그안에 `Blank Han Sans` 폰트 스타일을 적용해 주세요. -->
-
     <!-- 부트스트랩 인풋 박스 적용-->
+        <div class="header">
+            <h1 class="display-4">스파르타 푸드파이터</h1>
+            <p>본인만의 맛집을 소개하는 사이트입니다.<br> 맛집을 소개해 주세요! </p>
     <div class="post" id="input-card">
         <div class="form-floating mb-3">
             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
@@ -278,7 +308,7 @@
                 <option value="2">⭐⭐</option>
                 <option value="3">⭐⭐⭐</option>
                 <option value="4">⭐⭐⭐⭐</option>
-                <option value="5">⭐⭐⭐⭐⭐</option>
+                <option   option value="5">⭐⭐⭐⭐⭐</option>
             </select>
         </div>
         <div class="form-floating">
@@ -292,18 +322,52 @@
     </div>
     </div>
     </div>
-
+</div>
 
     <!-- 부트스트랩 카드 적용-->
     <div class="mycards">
+        <div class="row row-cols-1 row-cols-md-3">
+          <div class="col mb-4">
+            <div class="card h-100">
+              <img src="img/photo-1565299624946-b28f40a0ae38.avif" class="card-img-top" alt="hamburger" width="150" height="300">
+              <div class="card-body">
+                <h5 class="card-title">하와이안 피자</h5>
+                <p class="card-text">⭐⭐⭐⭐ <br> 이건 꼭 먹어봐야 해!</p>
+                <button class="card-button"> 주문하기</button>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="card h-100">
+              <img src="img/eiliv-aceron-pu6b4yIlQF4-unsplash.jpg" class="card-img-top" alt="hamburger" width="150" height="300">
+              <div class="card-body">
+                <h5 class="card-title">크리스피 버거</h5>
+                <p class="card-text">⭐⭐⭐ <br> 최고의 수제버거!</p>
+                <button class="card-button"> 주문하기 </button>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="card h-100">
+              <img src="img/istockphoto-1392056396-612x612.webp" class="card-img-top" alt="hamburger" width="150" height="300">
+              <div class="card-body">
+                <h5 class="card-title">해물 라면</h5>
+                <p class="card-text">⭐⭐⭐⭐⭐ <br> 국물이 아주 시원해요</p>
+                <button class="card-button"> 주문하기</button>
+              </div>
+            </div>
+          </div>
+          <!-- 카드 추가 가능 -->
+        </div>
+      </div>
+      
+
         <!-- - https://getbootstrap.com/
         - Bootstrap 사이트에서 cards 가져와 vscode에 붙여 넣기
         - *Docs → Card → Grid cards에서 3번째 코드입니다.*
         - <button> 태그를 생성해 주세요.
         - <button> 태그안에 `card-button` 클래스를 부여해 주세요.
         - 카드에 내용은 자유롭게 채워 주세요. -->
-    </div>
-
     <div class="container2">
         <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
             <div class="col mb-3">
